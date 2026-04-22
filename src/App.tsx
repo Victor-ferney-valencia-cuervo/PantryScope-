@@ -5,16 +5,16 @@ import { RecipeCard } from './components/RecipeCard';
 import { LoginForm } from './components/LoginForm';
 import { STUDENT } from './student';
 
+const { token, loading: authLoading, error: authError, login, logout } = useAuth();
+const [selectedId,setSelectedId] = useState<number | null>(null);
 
+const { recipes, loading, error, retry } = useRecipes(
+  token ?? '',
+  logout,
+);
 
-  function App() {
-   const { token, loading: authLoading, error: authError, login, logout } = useAuth();
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+function App() {
 
-  const { recipes, loading, error, retry } = useRecipes(
-    token ?? '',
-    logout,
-  );
 
   if (!token) {
     return <LoginForm onLogin={login} loading={authLoading} error={authError} />;
