@@ -1,43 +1,4 @@
 @import "tailwindcss";
-
-.titulo-1-inicio{
-    text-align: center;
-    color: #f1f1f1;
-    font-family:cursive;
-    font-size: 40px;
-    text-shadow: 1px 1px 5px rgb(241, 239, 239);
-     animation: cocacola 2s alternate infinite;
-}
-
-.titulo-1-inicio:hover{
-    font-size: 45px;
-    text-shadow: 1px 2px 5px  #00cf3e;
-   
-}
-@keyframes cocacola {
-    from{ transform: translateY(20px)
-    }to{
-        transform: translateY(0px);
-    }
-
-}
-
 body{
-    background: #000000;
-    align-items: center;
-    text-align: center;
-}
-.cajita1{
-    background:rgb(0, 0, 0);
-    animation: cocacola 2s alternate infinite;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    height: 90px;
-    box-shadow: 1px 1px 5px #fff;
-}
-.cajita1:hover{
-    box-shadow: 1px 1px 5px #00cf3e;
-}
-.hola{
-    
+    background: #cfcebd;
 }
